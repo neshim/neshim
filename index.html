@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>NIMO 이미지 링크</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
             background: #f9f9f9;
         }
         img {
-            width: 100vw;   /* 뷰포트 너비 전체 */
-            height: 100vh;  /* 뷰포트 높이 전체 */
-            object-fit: cover; /* 비율 유지하며 채우기 */
+            width: 1920px; 
+            height: auto;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            border-radius: 8px;
         }
     </style>
 </head>
