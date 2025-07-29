@@ -80,7 +80,6 @@
       font-size: 13px;
       position: relative;
       margin-bottom: 10px;
-      gap: 16px;
     }
     .timeline .event {
       flex: 1;
@@ -90,15 +89,8 @@
       min-width: 120px;
       position: relative;
     }
-    .timeline .event:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 36px;
-      right: -8px;
-      width: 16px;
-      height: 2px;
-      background: #98cfff;
-      z-index: 1;
+    .timeline .event:not(:last-child) {
+      margin-right: 8px;
     }
     .timeline .checkmark {
       font-size: 18px;
@@ -144,27 +136,16 @@
       margin-bottom: 0;
       padding-left: 0;
       text-align: left;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 8px;
     }
     .timeline .desc ul {
       margin: 0;
       padding-left: 18px;
-      display: flex;
-      flex-direction: row;
-      gap: 16px;
-      flex-wrap: wrap;
-      list-style: disc inside;
     }
     .timeline .desc ul li {
       color: #98cfff; /* 밝은 블루톤 */
       margin-bottom: 2px;
       text-align: left;
       font-size: 13px;
-      min-width: 110px;
-      display: inline-block;
     }
     /* 주의사항 카드 노란색 계열, 타이틀 색상 통일 */
     .card.warning {
@@ -185,17 +166,6 @@
       .timeline .event {
         min-width: unset;
         margin-bottom: 22px;
-      }
-      .timeline .event:not(:last-child)::after {
-        display: none;
-      }
-      .timeline .desc ul {
-        flex-direction: column;
-        gap: 0;
-      }
-      .timeline .desc ul li {
-        min-width: unset;
-        display: list-item;
       }
     }
   </style>
@@ -261,7 +231,12 @@
         <div class="event">
           <span class="checkmark">✅</span>
           <div class="date">5월</div>
-          <div class="title">네앱 전체 오픈, 2차 추가</div>
+          <div class="title">네앱 전체 오픈 안내</div>
+        </div>
+        <div class="event">
+          <span class="checkmark">✅</span>
+          <div class="date">5월</div>
+          <div class="title">2차 오픈</div>
           <div class="desc">
             <ul>
               <li>연도/분기별 지표</li>
@@ -274,7 +249,7 @@
         <div class="event">
           <span class="checkmark">✅</span>
           <div class="date">6월</div>
-          <div class="title">3차 추가</div>
+          <div class="title">3차 오픈</div>
           <div class="desc">
             <ul>
               <li>주제그룹피드 지표</li>
@@ -301,7 +276,7 @@
     <div class="card warning">
       <h2 class="section-title">⚠️ 주의사항</h2>
       <p>부여된 권한 레벨에 따라 리포트 조회 범위가 달라집니다. 권한 레벨은 네앱 NIMO 위키를 참고하여 주시기 바랍니다.</p>
-      <p>네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 네이버 내부 분석용이며, 허가되지 않은 외부 공유는 금지됩니다.</p>
+      <p>네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 네이버 내부 분석용이며 허가되지 않은 외부 공유는 금지됩니다.</p>
       <p>대시보드 추가 개발 요청, 데이터 문의 등이 있으신 경우 네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 연락 바랍니다.</p>
     </div>
 
