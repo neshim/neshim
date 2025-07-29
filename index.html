@@ -68,7 +68,7 @@
       background-color: #3F51B5;
       color: white;
     }
-    /* Timeline 스타일 (선 삭제, 체크로 변경) */
+    /* Timeline 스타일 (선 삭제, 체크/화살표로 변경) */
     .timeline {
       display: flex;
       justify-content: space-between;
@@ -102,8 +102,8 @@
       z-index: 2;
       line-height: 1;
     }
-    .timeline .soonmark {
-      font-size: 16px;
+    .timeline .arrowmark {
+      font-size: 18px;
       color: #FFD740;
       position: absolute;
       top: 0;
@@ -262,7 +262,7 @@
           </div>
         </div>
         <div class="event">
-          <span class="soonmark">SOON</span>
+          <span class="arrowmark">➡️</span>
           <div class="date">(TBD)</div>
           <div class="title"></div>
           <div class="desc">
