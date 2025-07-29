@@ -1,26 +1,186 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>NIMO 이미지 링크</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: #f9f9f9;
-        }
-        img {
-            width: 100vw;   /* 뷰포트 너비 전체 */
-            height: 100vh;  /* 뷰포트 높이 전체 */
-            object-fit: cover; /* 비율 유지하며 채우기 */
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>네이버앱서비스 NIMO 리포트</title>
+  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumSquare.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'NanumSquare', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #3F51B5;
+    }
+    a {
+      color: #3F51B5;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border-left: 8px solid #90CAF9;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 6px;
+    }
+    .highlight {
+      color: #F06292;
+      font-weight: bold;
+    }
+    .button-link {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #3F51B5;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .button-link:hover {
+      background-color: #303F9F;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    thead {
+      background: #e3f2fd;
+    }
+  </style>
 </head>
 <body>
-    <a href="https://wiki.navercorp.com/x/9KfNw" target="_blank">
-        <img src="NIMO.jpg" alt="NIMO 이미지" />
-    </a>
+  <div class="container">
+
+    <div class="card">
+      <h1>네이버앱서비스 NIMO 리포트의 목표</h1>
+      <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 주 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공하여 지표 이슈를 빠르게 파악하고 적시에 의사결정을 지원하는 것이 목표입니다.</p>
+
+      <a class="button-link" href="https://wiki.navercorp.com/x/6J6mxQ" target="_blank">활용 목적 및 오픈 계획 보기</a>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">주 사용자와 목적</h2>
+      <ul>
+        <li><strong>네이버앱서비스 부문 내 서비스 담당자</strong> - 부문 KPI 및 담당 서비스 주요 지표 모니터링</li>
+        <li><strong>기타 부문 KPI 담당자</strong></li>
+        <li><strong>경영진</strong> - 전사 주요 KPI 및 지표 모니터링</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">관련 조직 (초안)</h2>
+      <ul>
+        <li>네이버앱서비스: 메인, 홈피드, 주제판, 클립, 스포츠, 엔터, 도구, 치지직</li>
+        <li>검색, 발견/탐색, 콘텐츠(블로그, 카페), 광고, 쇼핑, 플레이스, 뉴스, 페이</li>
+        <li>Data Strategy, 전략지원, IR, PR, 마케팅, 주요 경영진(C-Level 포함)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">데이터의 범위</h2>
+      <p>장기적으로 서비스 버티컬을 확대하고, 주기적으로 모니터링이 필요한 주요 지표를 중심으로 범위를 확대할 예정입니다.</p>
+      <p><strong>출처:</strong> 인스펙터, QoE, Nlog, NDSQ, 검색로그, 광고로그(WING)</p>
+
+      <a class="button-link" href="https://wiki.navercorp.com/spaces/APPSVCDATA/pages/3341468792/NIMO+%EB%A6%AC%ED%8F%AC%ED%8A%B8+%EA%B5%AC%EC%84%B1+%EB%B0%8F+%EC%A7%80%ED%91%9C" target="_blank">NIMO 리포트 구성 및 지표 보기</a>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">서비스 대상</h2>
+      <ul>
+        <li>홈피드, 클립, 스포츠, 엔터, 주제그룹피드, 도구, 치지직</li>
+        <li>전사 약 90여 개 서비스 (검색, 광고, 쇼핑, 기타: 플레이스, 지도 등)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">주요 지표</h2>
+      <ul>
+        <li>피드: 노출수, 클릭수</li>
+        <li>사용자수, PV, 방문수, 체류시간</li>
+        <li>검색: QC, 세션수, CC, 서치피드 노출수/클릭수</li>
+        <li>광고: 매출</li>
+        <li>쇼핑: 거래액</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Dimension 예시</h2>
+      <ul>
+        <li>콘텐츠 카테고리, 피드 지면 구분, 식별키 구분</li>
+        <li>OS, MO/PC</li>
+        <li>검색어 카테고리, 광고 상품 구분, 쇼핑 상품 카테고리</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">기대 효과</h2>
+      <ul>
+        <li><strong>운영 리소스 개선:</strong> 통합 BI 환경 제공으로 수작업 감소</li>
+        <li><strong>지표 신뢰도 상승:</strong> 휴먼 에러 제거 및 지표 확인 환경 개선</li>
+        <li><strong>빠른 의사결정:</strong> 빠른 시각화 및 외부 부문 지표 확보 대응</li>
+        <li><strong>전사 대응:</strong> 전사 통합 데이터 체계와 단계적 정렬</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">문의 및 협업</h2>
+      <p><strong>네이버앱서비스 NIMO 관리 담당자:</strong> 전략지원 정하연, 심은혜</p>
+
+      <h3>Admin 및 협업 조직</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>조직</th>
+            <th>담당자</th>
+            <th>역할</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>네이버앱서비스 전략지원</td>
+            <td>정하연, 심은혜</td>
+            <td>NIMO 운영, 기획, 리포트 생성 및 권한 관리</td>
+          </tr>
+          <tr>
+            <td>네이버앱 메인 개발</td>
+            <td>권기수, 최병옥</td>
+            <td>NIMO 데이터 연결 및 로그 수집</td>
+          </tr>
+          <tr>
+            <td>전사 데이터 (User Data)</td>
+            <td>박준성, 김영진</td>
+            <td>NDSQ, NDS App, Nlog 데이터 제공</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </body>
 </html>
