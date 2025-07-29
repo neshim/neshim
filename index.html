@@ -72,22 +72,19 @@
     }
     .timeline .event {
       text-align: center;
-      max-width: 150px;
+      max-width: 160px;
       position: relative;
     }
-    .timeline .event strong {
-      display: block;
-      color: white;
-    }
+    .timeline .event strong,
     .timeline .event p {
-      margin: 10px 0;
-      color: white;
+      text-align: center;
+      margin: 0;
     }
     .timeline .event ul {
       list-style: disc;
-      padding-left: 18px;
-      color: #80d8ff;
-      margin-top: 6px;
+      padding-left: 20px;
+      color: #00bcd4;
+      margin-top: 10px;
       text-align: left;
     }
     .timeline .event:before {
@@ -97,7 +94,7 @@
       background-color: #3F51B5;
       border-radius: 50%;
       display: block;
-      margin: 0 auto 8px;
+      margin: 0 auto 10px;
     }
     .timeline .event:not(:last-child)::after {
       content: "";
@@ -119,16 +116,14 @@
 
     <div class="card">
       <h2 class="section-title">네이버앱서비스 NIMO 리포트의 목표</h2>
-      <ul>
-        <li>네이버앱서비스 부문 내 리더쉽과 서비스 담당자 분들을 주 대상으로</li>
-        <li>모니터링이 필요한 서비스의 주요 지표를 한 곳에서 파악할 수 있는 환경 제공</li>
-        <li>지표 이슈를 빠르게 파악하고 적시의 의사결정을 지원하는 것</li>
-      </ul>
+      <p>
+        네이버앱서비스 부문 내 리더십과 서비스 담당자를 주 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공하여
+        지표 이슈를 빠르게 파악하고 적시에 의사결정을 지원하는 것이 목표입니다.
+      </p>
     </div>
 
     <div class="card">
       <h2 class="section-title">주요 진행 일정</h2>
-      <br>
       <div class="timeline">
         <div class="event">
           <strong>4/4</strong>
@@ -164,7 +159,7 @@
         </div>
         <div class="event">
           <strong>(TBD)</strong>
-          <p></p>
+          <p>예정</p>
           <ul>
             <li>피드 기여도 지표</li>
             <li>모바일인덱스 경쟁사 현황</li>
