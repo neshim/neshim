@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>네이버앱서비스 NIMO</title>
+  <title>네이버앱서비스 NIMO HOME</title>
   <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumSquare.css" rel="stylesheet">
   <style>
     body {
@@ -93,7 +93,7 @@
       margin-right: 8px;
     }
     .timeline .checkmark {
-      font-size: 24px;
+      font-size: 18px;
       color: #26D16C;
       position: absolute;
       top: 0;
@@ -102,8 +102,24 @@
       z-index: 2;
       line-height: 1;
     }
+    .timeline .soonmark {
+      font-size: 16px;
+      color: #FFD740;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      line-height: 1;
+      font-family: 'NanumSquare', sans-serif;
+      font-weight: bold;
+      background: #fff9e5;
+      border-radius: 5px;
+      padding: 1px 8px;
+      border: 1px solid #FFD740;
+    }
     .timeline .date {
-      margin-top: 28px;
+      margin-top: 24px;
       font-weight: bold;
       font-size: 1em;
       color: #fff;
@@ -246,7 +262,7 @@
           </div>
         </div>
         <div class="event">
-          <span class="checkmark">✅</span>
+          <span class="soonmark">SOON</span>
           <div class="date">(TBD)</div>
           <div class="title"></div>
           <div class="desc">
