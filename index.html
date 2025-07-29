@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>네이버앱서비스 NIMO 리포트</title>
+  <title>네이버앱서비스 NIMO HOME</title>
   <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumSquare.css" rel="stylesheet">
   <style>
     body {
@@ -12,7 +12,13 @@
       padding: 40px;
       color: #333;
     }
-    h1, h2, h3 {
+    h1 {
+      color: rgb(3, 199, 90);
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2, h3 {
       color: #3F51B5;
     }
     a {
@@ -65,9 +71,24 @@
       font-size: 13px;
     }
     .timeline .event {
-      text-align: left;
+      text-align: center;
       max-width: 150px;
       position: relative;
+    }
+    .timeline .event strong {
+      display: block;
+      color: white;
+    }
+    .timeline .event p {
+      margin: 10px 0;
+      color: white;
+    }
+    .timeline .event ul {
+      list-style: disc;
+      padding-left: 18px;
+      color: #80d8ff;
+      margin-top: 6px;
+      text-align: left;
     }
     .timeline .event:before {
       content: "";
@@ -89,57 +110,20 @@
       z-index: -1;
       transform: translateX(50%);
     }
-    .event ul {
-      list-style: disc;
-      padding-left: 18px;
-      color: #80d8ff;
-      margin-top: 6px;
-    }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <div class="card">
-      <h1>네이버앱서비스 NIMO 리포트의 목표</h1>
-      <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 주 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공하여 지표 이슈를 빠르게 파악하고 적시에 의사결정을 지원하는 것이 목표입니다.</p>
-      <a class="button-link" href="https://wiki.navercorp.com/x/6J6mxQ" target="_blank"><strong>활용 목적 및 오픈 계획 보기</strong></a>
-    </div>
+    <h1>네이버앱서비스 NIMO HOME</h1>
 
     <div class="card">
-      <h2 class="section-title">데이터 범위</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>구분</th>
-            <th>네이버앱서비스 부문</th>
-            <th>전사서비스</th>
-            <th>그 외 부문 (TBD)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>출처</td>
-            <td>NDSQ, NDSApp, 인스펙터(일부), QoE(TBD) 등</td>
-            <td>NDSQ, NDSApp</td>
-            <td>검색로그, 광고로그 등</td>
-          </tr>
-          <tr>
-            <td>서비스 대상</td>
-            <td>홈피드, 클립(일부), 스포츠, 엔터, 주제그룹피드, 도구</td>
-            <td>전사 약 90여개 서비스</td>
-            <td>검색, 광고, 쇼핑, 기타(플레이스, 지도 등)</td>
-          </tr>
-          <tr>
-            <td>주요지표</td>
-            <td>피드 노출수, 클릭수, 콘텐츠 카테고리(TBD)</td>
-            <td>사용자수, PV, 방문수, 체류시간</td>
-            <td>검색 QC, 세션수, CC, 광고매출, 쇼핑 거래액 등</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <a class="button-link" href="https://wiki.navercorp.com/spaces/APPSVCDATA/pages/3341468792/NIMO+%EB%A6%AC%ED%8F%AC%ED%8A%B8+%EA%B5%AC%EC%84%B1+%EB%B0%8F+%EC%A7%80%ED%91%9C" target="_blank"><strong>NIMO 리포트 구성 및 지표 보기</strong></a>
+      <h2 class="section-title">네이버앱서비스 NIMO 리포트의 목표</h2>
+      <ul>
+        <li>네이버앱서비스 부문 내 리더쉽과 서비스 담당자 분들을 주 대상으로</li>
+        <li>모니터링이 필요한 서비스의 주요 지표를 한 곳에서 파악할 수 있는 환경 제공</li>
+        <li>지표 이슈를 빠르게 파악하고 적시의 의사결정을 지원하는 것</li>
+      </ul>
     </div>
 
     <div class="card">
@@ -147,20 +131,20 @@
       <br>
       <div class="timeline">
         <div class="event">
-          <strong>4/4</strong><br><br>
-          NIMO 베타 오픈<br><br>
+          <strong>4/4</strong>
+          <p>NIMO 베타 오픈</p>
           <ul>
             <li>전사 체류시간 KPI</li>
             <li>네이버서비스 지표</li>
           </ul>
         </div>
         <div class="event">
-          <strong>5/5</strong><br><br>
-          네앱 전체 오픈 안내
+          <strong>5/5</strong>
+          <p>네앱 전체 오픈 안내</p>
         </div>
         <div class="event">
-          <strong>5/15</strong><br><br>
-          2차 오픈<br><br>
+          <strong>5/15</strong>
+          <p>2차 오픈</p>
           <ul>
             <li>연도/분기별 지표</li>
             <li>로그인 사용자 데모</li>
@@ -169,8 +153,8 @@
           </ul>
         </div>
         <div class="event">
-          <strong>6/20</strong><br><br>
-          3차 오픈<br><br>
+          <strong>6/20</strong>
+          <p>3차 오픈</p>
           <ul>
             <li>주제그룹피드 지표</li>
             <li>NDSApp 앱 주요지표</li>
@@ -179,19 +163,14 @@
           </ul>
         </div>
         <div class="event">
-          <strong>(TBD)</strong><br><br>
+          <strong>(TBD)</strong>
+          <p></p>
           <ul>
             <li>피드 기여도 지표</li>
             <li>모바일인덱스 경쟁사 현황</li>
           </ul>
         </div>
       </div>
-    </div>
-
-    <div class="card">
-      <h2 class="section-title">⚠️ 주의사항</h2>
-      <p>네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 네이버 내부 분석용이며 허가되지 않은 외부 공유는 금지됩니다.</p>
-      <p>대시보드 추가 개발 요청, 데이터 문의 등이 있으신 경우 네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 연락 바랍니다.</p>
     </div>
 
   </div>
