@@ -72,74 +72,100 @@
     .timeline {
       display: flex;
       justify-content: space-between;
-      align-items: stretch;
-      background-color: #001f3f;
+      align-items: flex-start;
+      background-color: #00264d;
       color: white;
-      padding: 20px;
+      padding: 32px 20px 24px 20px;
       border-radius: 12px;
       font-size: 13px;
+      position: relative;
       margin-bottom: 10px;
     }
     .timeline .event {
-      text-align: center;
-      max-width: 170px;
-      position: relative;
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      min-width: 120px;
+      position: relative;
     }
-    .timeline .event:before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      background-color: #3F51B5;
+    .timeline .event:not(:last-child) {
+      margin-right: 8px;
+    }
+    .timeline .circle {
+      width: 14px;
+      height: 14px;
+      background-color: #6D7DF5;
       border-radius: 50%;
-      display: block;
-      margin: 0 auto 8px;
-    }
-    .timeline .event:not(:last-child)::after {
-      content: "";
       position: absolute;
-      top: 12px;
-      right: -8.5px;
-      width: calc(100% + 17px);
-      height: 2px;
-      background-color: #3F51B5;
-      z-index: -1;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
     }
-    .timeline .event-content {
+    .timeline .date {
+      margin-top: 22px;
+      font-weight: bold;
+      font-size: 1em;
       color: #fff;
+      margin-bottom: 6px;
       text-align: center;
-      margin-top: 4px;
+    }
+    .timeline .title {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .timeline .desc {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+    .timeline .desc ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .timeline .desc ul li {
+      color: #98cfff; /* 밝은 블루톤 */
+      margin-bottom: 2px;
+      text-align: left;
       font-size: 13px;
     }
-    .timeline .event-content ul {
-      padding-left: 0;
-      list-style: none;
-      margin: 8px 0 0 0;
-      text-align: left;
-      display: inline-block;
+    /* 선: 원들 사이에 고정 */
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 35px;
+      right: 35px;
+      height: 2px;
+      background: #6D7DF5;
+      z-index: 1;
     }
-    .timeline .event-content ul li {
-      text-align: left;
-      margin-left: 0;
-      margin-bottom: 2px;
-      padding-left: 0;
-      color: #fff;
+    /* 주의사항 카드 노란색 계열 */
+    .card.warning {
+      background: #FFF9E5;
+      border-left: 8px solid #FFD740;
+      color: #665500;
+    }
+    .card.warning h2,
+    .card.warning h3 {
+      color: #FFD740;
     }
     @media (max-width: 900px) {
       .timeline {
         flex-direction: column;
         padding: 12px;
+        min-width: unset;
       }
       .timeline .event {
-        margin-bottom: 16px;
-        max-width: none;
-        flex: unset;
+        min-width: unset;
+        margin-bottom: 22px;
       }
-      .timeline .event:not(:last-child)::after {
+      .timeline::before {
         display: none;
       }
     }
@@ -162,7 +188,7 @@
             <th>구분</th>
             <th>네이버앱서비스 부문</th>
             <th>전사서비스</th>
-            <th>그 외 부문</th>
+            <th>그 외 부문(TBD)</th>
           </tr>
         </thead>
         <tbody>
@@ -180,7 +206,7 @@
           </tr>
           <tr>
             <td>주요지표</td>
-            <td>피드 노출수, 클릭수, 콘텐츠 카테고리</td>
+            <td>피드 노출수, 클릭수, 콘텐츠 카테고리(TBD)</td>
             <td>사용자수, PV, 방문수, 체류시간</td>
             <td>검색 QC, 세션수, CC, 광고매출, 쇼핑 거래액 등</td>
           </tr>
@@ -193,9 +219,10 @@
       <h2 class="section-title">주요 진행 일정</h2>
       <div class="timeline">
         <div class="event">
-          <strong>4/4</strong>
-          <div class="event-content">
-            NIMO 베타 오픈
+          <div class="circle"></div>
+          <div class="date">4/4</div>
+          <div class="title">NIMO 베타 오픈</div>
+          <div class="desc">
             <ul>
               <li>전사 체류시간 KPI</li>
               <li>네이버서비스 지표</li>
@@ -203,15 +230,15 @@
           </div>
         </div>
         <div class="event">
-          <strong>5/5</strong>
-          <div class="event-content">
-            네앱 전체 오픈 안내
-          </div>
+          <div class="circle"></div>
+          <div class="date">5/5</div>
+          <div class="title">네앱 전체 오픈 안내</div>
         </div>
         <div class="event">
-          <strong>5/15</strong>
-          <div class="event-content">
-            2차 오픈
+          <div class="circle"></div>
+          <div class="date">5/15</div>
+          <div class="title">2차 오픈</div>
+          <div class="desc">
             <ul>
               <li>연도/분기별 지표</li>
               <li>로그인 사용자 데모</li>
@@ -221,9 +248,10 @@
           </div>
         </div>
         <div class="event">
-          <strong>6/20</strong>
-          <div class="event-content">
-            3차 오픈
+          <div class="circle"></div>
+          <div class="date">6/20</div>
+          <div class="title">3차 오픈</div>
+          <div class="desc">
             <ul>
               <li>주제그룹피드 지표</li>
               <li>NDSApp 앱 주요지표</li>
@@ -233,8 +261,10 @@
           </div>
         </div>
         <div class="event">
-          <strong>(TBD)</strong>
-          <div class="event-content">
+          <div class="circle"></div>
+          <div class="date">(TBD)</div>
+          <div class="title"></div>
+          <div class="desc">
             <ul>
               <li>피드 기여도 지표</li>
               <li>모바일인덱스 경쟁사 현황</li>
@@ -244,7 +274,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card warning">
       <h2 class="section-title">⚠️ 주의사항</h2>
       <p>네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 네이버 내부 분석용이며 허가되지 않은 외부 공유는 금지됩니다.</p>
       <p>대시보드 추가 개발 요청, 데이터 문의 등이 있으신 경우 네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 연락 바랍니다.</p>
