@@ -80,6 +80,7 @@
       font-size: 13px;
       position: relative;
       margin-bottom: 10px;
+      gap: 16px;
     }
     .timeline .event {
       flex: 1;
@@ -89,8 +90,15 @@
       min-width: 120px;
       position: relative;
     }
-    .timeline .event:not(:last-child) {
-      margin-right: 8px;
+    .timeline .event:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 36px;
+      right: -8px;
+      width: 16px;
+      height: 2px;
+      background: #98cfff;
+      z-index: 1;
     }
     .timeline .checkmark {
       font-size: 18px;
@@ -136,16 +144,27 @@
       margin-bottom: 0;
       padding-left: 0;
       text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8px;
     }
     .timeline .desc ul {
       margin: 0;
       padding-left: 18px;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      flex-wrap: wrap;
+      list-style: disc inside;
     }
     .timeline .desc ul li {
       color: #98cfff; /* 밝은 블루톤 */
       margin-bottom: 2px;
       text-align: left;
       font-size: 13px;
+      min-width: 110px;
+      display: inline-block;
     }
     /* 주의사항 카드 노란색 계열, 타이틀 색상 통일 */
     .card.warning {
@@ -166,6 +185,17 @@
       .timeline .event {
         min-width: unset;
         margin-bottom: 22px;
+      }
+      .timeline .event:not(:last-child)::after {
+        display: none;
+      }
+      .timeline .desc ul {
+        flex-direction: column;
+        gap: 0;
+      }
+      .timeline .desc ul li {
+        min-width: unset;
+        display: list-item;
       }
     }
   </style>
@@ -227,6 +257,7 @@
               <li>네이버서비스 지표</li>
             </ul>
           </div>
+        </div>
         <div class="event">
           <span class="checkmark">✅</span>
           <div class="date">5월</div>
