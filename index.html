@@ -68,7 +68,7 @@
       background-color: #3F51B5;
       color: white;
     }
-    /* Timeline 스타일 */
+    /* Timeline 스타일 (선 삭제, 체크로 변경) */
     .timeline {
       display: flex;
       justify-content: space-between;
@@ -92,19 +92,18 @@
     .timeline .event:not(:last-child) {
       margin-right: 8px;
     }
-    .timeline .circle {
-      width: 14px;
-      height: 14px;
-      background-color: #6D7DF5;
-      border-radius: 50%;
+    .timeline .checkmark {
+      font-size: 24px;
+      color: #26D16C;
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
+      line-height: 1;
     }
     .timeline .date {
-      margin-top: 22px;
+      margin-top: 28px;
       font-weight: bold;
       font-size: 1em;
       color: #fff;
@@ -134,17 +133,6 @@
       text-align: left;
       font-size: 13px;
     }
-    /* 선: 원과 겹치도록 설정 */
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 7px; /* circle의 중간 */
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #6D7DF5;
-      z-index: 2;
-    }
     /* 주의사항 카드 노란색 계열, 타이틀 색상 통일 */
     .card.warning {
       background: #FFF9E5;
@@ -164,9 +152,6 @@
       .timeline .event {
         min-width: unset;
         margin-bottom: 22px;
-      }
-      .timeline::before {
-        display: none;
       }
     }
   </style>
@@ -219,7 +204,7 @@
       <h2 class="section-title">주요 진행 일정</h2>
       <div class="timeline">
         <div class="event">
-          <div class="circle"></div>
+          <span class="checkmark">✅</span>
           <div class="date">4/4</div>
           <div class="title">NIMO 베타 오픈</div>
           <div class="desc">
@@ -230,12 +215,12 @@
           </div>
         </div>
         <div class="event">
-          <div class="circle"></div>
+          <span class="checkmark">✅</span>
           <div class="date">5/5</div>
           <div class="title">네앱 전체 오픈 안내</div>
         </div>
         <div class="event">
-          <div class="circle"></div>
+          <span class="checkmark">✅</span>
           <div class="date">5/15</div>
           <div class="title">2차 오픈</div>
           <div class="desc">
@@ -248,7 +233,7 @@
           </div>
         </div>
         <div class="event">
-          <div class="circle"></div>
+          <span class="checkmark">✅</span>
           <div class="date">6/20</div>
           <div class="title">3차 오픈</div>
           <div class="desc">
@@ -261,7 +246,7 @@
           </div>
         </div>
         <div class="event">
-          <div class="circle"></div>
+          <span class="checkmark">✅</span>
           <div class="date">(TBD)</div>
           <div class="title"></div>
           <div class="desc">
