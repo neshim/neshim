@@ -12,10 +12,20 @@
       padding: 40px;
       color: #333;
     }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .header img {
+      width: 40px;
+      height: 40px;
+    }
     h1 {
       font-size: 2em;
-      margin-bottom: 28px;
       font-weight: 700;
+      margin: 0;
     }
     a {
       color: #1976D2;
@@ -42,41 +52,49 @@
     }
     .card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 28px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 12px;
     }
     .card h2 {
       font-size: 18px;
-      margin: 0 0 14px 0;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      margin-bottom: 12px;
     }
     .card ul {
       margin: 0;
       padding-left: 20px;
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.8;
+    }
+    .card li {
+      margin-bottom: 6px;
     }
     .card p {
       font-size: 15px;
-      margin: 0 0 8px 0;
+      margin: 0;
     }
     .warning {
-      background: #fff;
+      background: #fff3f3;
       border: 1px solid #f44336;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 20px;
       font-size: 14px;
       color: #d32f2f;
+      margin-top: 20px;
     }
     .warning strong {
       color: #000;
+    }
+    /* 링크 강조 스타일 */
+    .card ul a strong {
+      color: #1976D2;
     }
     @media (max-width: 900px) {
       .grid, .grid-2 {
@@ -87,7 +105,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>네이버앱서비스 NIMO 이용안내</h1>
+    <div class="header">
+      <img src="C:\Users\USER\Desktop\naver.png" alt="네이버 로고">
+      <h1>네이버앱서비스 NIMO 이용안내</h1>
+    </div>
 
     <!-- 첫 번째 3열 -->
     <div class="grid">
@@ -116,21 +137,24 @@
       </div>
     </div>
 
-    <!-- 두 번째 2열 -->
+    <!-- 두 번째 2열 (가독성 높임) -->
     <div class="grid-2">
       <div class="card">
         <h2>📑 Report 조회 공간 안내</h2>
         <ul>
-          <li>체류시간 KPI: 전사 체류시간 KPI 조회</li>
-          <li>네이버 서비스 지표: 네이버앱서비스 내 상세 서비스 별 지표 조회</li>
-          <li>네이버앱서비스 앱 지표: 앱 지표 조회</li>
-          <li>네이버앱서비스 주요 일정: 주요 일정 캘린더, Jira 조회</li>
+          <li>📈 <a href="https://naver.me/GbDZv4Po" target="_blank"><strong>체류시간 KPI</strong></a>: 전사 체류시간 KPI 조회</li>
+          <li>🗂 <a href="https://naver.me/xHmg3S7U" target="_blank"><strong>네이버 서비스 지표</strong></a>: 네이버앱서비스 내 상세 서비스 별 지표 조회</li>
+          <li>📱 <a href="https://naver.me/FYqDHk5m" target="_blank"><strong>네이버앱서비스 앱 지표</strong></a>: 앱 지표 조회</li>
+          <li>📅 <a href="https://naver.me/5EUdLXkV" target="_blank"><strong>네이버앱서비스 주요 일정</strong></a>: 주요 일정 캘린더, Jira 조회</li>
+          <li>🏠 <a href="https://naver.me/ID3ogsva" target="_blank"><strong>네이버 메인 NIMO</strong></a>: 네이버 메인 상세 지표, ABT 지표 조회</li>
+          <li>💻 <a href="https://naver.me/x0Uc7vwl" target="_blank"><strong>DA Wing</strong></a>: 광고 지표 조회</li>
+          <li>⚡ <a href="https://naver.me/xTTOZogS" target="_blank"><strong>치지직 BA</strong></a>: 치지직 지표 조회</li>
         </ul>
       </div>
       <div class="card">
         <h2>❓ 데이터 이슈 및 문의</h2>
-        <p>NIMO report화 필요하거나, NIMO에 없는 데이터가 추가로 필요할 경우</p>
-        <p>네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 문의바랍니다.</p>
+        <p>필요한 데이터가 없거나, 데이터가 이상할 경우</p>
+        <p>네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 문의</p>
       </div>
     </div>
 
