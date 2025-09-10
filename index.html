@@ -18,10 +18,6 @@
       gap: 12px;
       margin-bottom: 28px;
     }
-    .header img {
-      width: 40px;
-      height: 40px;
-    }
     h1 {
       font-size: 2em;
       font-weight: 700;
@@ -101,12 +97,27 @@
         grid-template-columns: 1fr;
       }
     }
+    /* N 이모티콘 스타일 */
+    .n-emoji {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #00ff85 0%, #00c66c 100%);
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+      border-radius: 6px;
+      text-align: center;
+      line-height: 24px;
+      font-family: 'NanumSquare', sans-serif;
+      letter-spacing: -1px;
+      margin-right: 4px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <img src="neshim/naver.jpg" alt="네이버 로고">
       <h1>네이버앱서비스 NIMO 이용안내</h1>
     </div>
 
@@ -114,7 +125,7 @@
     <div class="grid">
       <div class="card">
         <h2>ℹ️ 서비스 소개</h2>
-        <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공합니다.</p></p></p>
+        <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공합니다.</p>
         <p><a href="https://wiki.navercorp.com/x/6J6mxQ" target="_blank">활용 목적 및 오픈 계획 보기</a></p>
       </div>
       <div class="card">
@@ -143,9 +154,10 @@
         <h2>📑 Report 조회 공간 안내</h2>
         <ul>
           <li>📈 <a href="https://naver.me/GbDZv4Po" target="_blank"><strong>체류시간 KPI</strong></a>: 전사 체류시간 KPI 조회</li>
-          <li>🗂 <a href="https://naver.me/xHmg3S7U" target="_blank"><strong>네이버 서비스 지표</strong></a>: 네이버앱서비스 내 상세 서비스 별 지표 조회</li>
+          <li><span class="n-emoji">N</span><a href="https://naver.me/xHmg3S7U" target="_blank"><strong>네이버 서비스 지표</strong></a>: 네이버앱서비스 내 상세 서비스 별 지표 조회</li>
           <li>📱 <a href="https://naver.me/FYqDHk5m" target="_blank"><strong>네이버앱서비스 앱 지표</strong></a>: 앱 지표 조회</li>
-          <li>📅 <a href="https://naver.me/5EUdLXkV" target="_blank"><strong>네이버앱서비스 주요 일정</strong></a>: 주요 일정 캘린더, Jira 조회</li></li></p></p>
+          <li>📅 <a href="https://naver.me/5EUdLXkV" target="_blank"><strong>네이버앱서비스 주요 일정</strong></a>: 주요 일정 캘린더, Jira 조회</li>
+          <br>
           <li>🏠 <a href="https://naver.me/ID3ogsva" target="_blank"><strong>네이버 메인 NIMO</strong></a>: 네이버 메인 상세 지표, ABT 지표 조회</li>
           <li>💻 <a href="https://naver.me/x0Uc7vwl" target="_blank"><strong>DA Wing</strong></a>: 광고 지표 조회</li>
           <li>⚡ <a href="https://naver.me/xTTOZogS" target="_blank"><strong>치지직 BA</strong></a>: 치지직 지표 조회</li>
@@ -153,17 +165,16 @@
       </div>
       <div class="card">
         <h2>❓ 데이터 이슈 및 문의</h2>
-        <p>필요한 데이터가 없거나, 데이터가 이상할 경우</p>
-        <p>네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 문의</p>
+        <p>NIMO report화가 필요하거나, 필요한 데이터가 없는 경우</p>
+        <p>네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 문의바랍니다.</p>
       </div>
     </div>
 
     <!-- 주의사항 -->
     <div class="warning">
-      ⚠️ 네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 <strong>내부 분석용</strong>이며, <strong>외부 공유는 금지</strong>됩니다.  
+      ⚠️ 네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 <strong>내부 분석용</strong>이며, <strong>외부 공유는 금지</strong>됩니다.<br>
       권한 레벨에 따라 리포트 조회 범위가 다를 수 있으며, 세부 권한은 네앱 NIMO 위키를 참고하세요.
     </div>
   </div>
 </body>
 </html>
-
