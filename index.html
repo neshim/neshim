@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>네이버앱서비스 NIMO</title>
+  <title>네이버앱서비스 NIMO 이용안내</title>
   <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NanumSquare.css" rel="stylesheet">
   <style>
     body {
@@ -12,274 +12,121 @@
       padding: 40px;
       color: #333;
     }
-    h1, h2, h3 {
-      color: #3F51B5;
-    }
-    .title-home {
-      color: #3F51B5;
-      font-size: 2.3em;
-      margin-top: 0;
-      margin-bottom: 18px;
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 24px;
       font-weight: 700;
     }
     a {
-      color: #3F51B5;
+      color: #1976D2;
+      text-decoration: none;
+    }
+    a:hover {
       text-decoration: underline;
-      font-weight: bold;
     }
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
     }
     .card {
       background: #fff;
-      border-left: 8px solid #90CAF9;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 24px;
-      margin-bottom: 30px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      position: relative;
       display: flex;
       flex-direction: column;
-    }
-    .card .card-link {
-      margin-top: 18px;
-      align-self: flex-end;
-    }
-    .section-title {
-      font-size: 20px;
-      margin-top: 0;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 16px;
-      font-size: 14px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #3F51B5;
-      color: white;
-    }
-    /* Timeline 스타일 (선 삭제, 체크/화살표로 변경) */
-    .timeline {
-      display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      background-color: #00264d;
-      color: white;
-      padding: 32px 20px 24px 20px;
-      border-radius: 12px;
-      font-size: 13px;
-      position: relative;
-      margin-bottom: 10px;
     }
-    .timeline .event {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 120px;
-      position: relative;
+    .card h2 {
+      font-size: 16px;
+      margin: 0 0 12px 0;
+      font-weight: 600;
     }
-    .timeline .event:not(:last-child) {
-      margin-right: 8px;
-    }
-    .timeline .checkmark {
-      font-size: 18px;
-      color: #26D16C;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      line-height: 1;
-    }
-    .timeline .arrowmark {
-      font-size: 18px;
-      color: #333;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      line-height: 1;
-      background: transparent;
-      border-radius: 0;
-      padding: 0;
-      border: none;
-    }
-    .timeline .date {
-      margin-top: 24px;
-      font-weight: bold;
-      font-size: 1em;
-      color: #fff;
-      margin-bottom: 6px;
-      text-align: center;
-    }
-    .timeline .title {
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 6px;
-      text-align: center;
-    }
-    .timeline .desc {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 0;
-      text-align: left;
-    }
-    .timeline .desc ul {
+    .card ul {
       margin: 0;
       padding-left: 18px;
+      font-size: 14px;
+      line-height: 1.6;
     }
-    .timeline .desc ul li {
-      color: #98cfff; /* 밝은 블루톤 */
-      margin-bottom: 2px;
-      text-align: left;
+    .card p {
+      font-size: 14px;
+      margin: 0 0 6px 0;
+    }
+    .warning {
+      background: #fff;
+      border: 1px solid #f44336;
+      border-radius: 6px;
+      padding: 16px;
       font-size: 13px;
+      color: #d32f2f;
     }
-    /* 주의사항 카드 노란색 계열, 타이틀 색상 통일 */
-    .card.warning {
-      background: #FFF9E5;
-      border-left: 8px solid #FFD740;
-      color: #665500;
-    }
-    .card.warning h2,
-    .card.warning h3 {
-      color: #3F51B5;
+    .warning strong {
+      color: #000;
     }
     @media (max-width: 900px) {
-      .timeline {
-        flex-direction: column;
-        padding: 12px;
-        min-width: unset;
-      }
-      .timeline .event {
-        min-width: unset;
-        margin-bottom: 22px;
+      .grid, .grid-2 {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1>네이버앱서비스 NIMO 이용안내</h1>
 
-    <div class="card">
-      <div class="title-home">네이버앱서비스 NIMO</div>
-      <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 주 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공하여 지표 이슈를 빠르게 파악하고 적시에 의사결정을 지원하는 것이 목표입니다.</p>
-      <a class="card-link" href="https://wiki.navercorp.com/x/6J6mxQ" target="_blank"><strong>활용 목적 및 오픈 계획 보기</strong></a>
-    </div>
-
-    <div class="card">
-      <h2 class="section-title">데이터 범위</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>구분</th>
-            <th>네이버앱서비스 부문</th>
-            <th>전사 서비스</th>
-            <th>그 외 부문(TBD)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>출처</td>
-            <td>NDSQ, NDSApp, 인스펙터(일부), QoE(TBD) 등</td>
-            <td>NDSQ, NDSApp</td>
-            <td>검색로그, 광고로그 등</td>
-          </tr>
-          <tr>
-            <td>서비스 대상</td>
-            <td>홈피드, 클립(일부), 스포츠, 엔터, 주제그룹피드, 도구</td>
-            <td>전사 약 90여개 서비스</td>
-            <td>검색, 광고, 쇼핑, 기타(플레이스, 지도 등)</td>
-          </tr>
-          <tr>
-            <td>주요 지표</td>
-            <td>피드 노출수, 클릭수, 콘텐츠 카테고리(TBD)</td>
-            <td>사용자수, PV, 방문수, 체류시간</td>
-            <td>검색 QC, 세션수, CC, 광고매출, 쇼핑 거래액 등(TBD)</td>
-          </tr>
-        </tbody>
-      </table>
-      <a class="card-link" href="https://wiki.navercorp.com/spaces/APPSVCDATA/pages/3341468792/NIMO+%EB%A6%AC%ED%8F%AC%ED%8A%B8+%EA%B5%AC%EC%84%B1+%EB%B0%8F+%EC%A7%80%ED%91%9C" target="_blank"><strong>NIMO 리포트 구성 및 지표 보기</strong></a>
-    </div>
-
-    <div class="card">
-      <h2 class="section-title">주요 진행 일정</h2>
-      <div class="timeline">
-        <div class="event">
-          <span class="checkmark">✅</span>
-          <div class="date">4월</div>
-          <div class="title">NIMO 베타 오픈</div>
-          <div class="desc">
-            <ul>
-              <li>전사 체류시간 KPI</li>
-              <li>네이버서비스 지표</li>
-            </ul>
-          </div>
-        </div>
-        <div class="event">
-          <span class="checkmark">✅</span>
-          <div class="date">5월</div>
-          <div class="title">네앱 전체 오픈 안내</div>
-        </div>
-        <div class="event">
-          <span class="checkmark">✅</span>
-          <div class="date">5월</div>
-          <div class="title">2차 오픈</div>
-          <div class="desc">
-            <ul>
-              <li>연도/분기별 지표</li>
-              <li>로그인 사용자 데모</li>
-              <li>주요 일정 캘린더</li>
-              <li>스포츠 종목별 상세 지표</li>
-            </ul>
-          </div>
-        </div>
-        <div class="event">
-          <span class="checkmark">✅</span>
-          <div class="date">6월</div>
-          <div class="title">3차 오픈</div>
-          <div class="desc">
-            <ul>
-              <li>주제그룹피드 지표</li>
-              <li>NDSApp 앱 주요지표</li>
-              <li>앱 사용자 데모</li>
-              <li>앱 OS별 지표</li>
-            </ul>
-          </div>
-        </div>
-        <div class="event">
-          <span class="arrowmark">➡️</span>
-          <div class="date">(TBD)</div>
-          <div class="title"></div>
-          <div class="desc">
-            <ul>
-              <li>피드 기여도 지표</li>
-              <li>모바일인덱스 경쟁사 현황</li>
-            </ul>
-          </div>
-        </div>
+    <!-- 첫 번째 3열 -->
+    <div class="grid">
+      <div class="card">
+        <h2>서비스 소개</h2>
+        <p>네이버앱서비스 부문 내 리더십과 서비스 담당자를 대상으로 주요 지표를 한 곳에서 파악할 수 있는 환경을 제공합니다.</p>
+        <p><a href="https://wiki.navercorp.com/x/6J6mxQ" target="_blank">활용 목적 및 오픈 계획 보기</a></p>
+      </div>
+      <div class="card">
+        <h2>데이터 범위</h2>
+        <ul>
+          <li><strong>출처:</strong> NDSQ, NDSApp, 인스펙터(일부), QoE(TBD) 등</li>
+          <li><strong>서비스 대상:</strong> 홈피드, 클립, 스포츠, 엔터, 주제그룹피드, 도구 등</li>
+          <li><strong>주요 지표:</strong> 사용자수, PV, 방문수, 체류시간, 피드 노출수, 클릭수 등</li>
+        </ul>
+        <p><a href="https://wiki.navercorp.com/spaces/APPSVCDATA/pages/3341468792/NIMO+%EB%A6%AC%ED%8F%AC%ED%8A%B8+%EA%B5%AC%EC%84%B1+%EB%B0%8F+%EC%A7%80%ED%91%9C" target="_blank">NIMO 리포트 구성 및 지표 보기</a></p>
+      </div>
+      <div class="card">
+        <h2>주요 진행 일정</h2>
+        <ul>
+          <li><strong>4월:</strong> NIMO 베타 오픈 (전사 KPI, 서비스 지표)</li>
+          <li><strong>5월:</strong> 네앱 전체 오픈 안내, 2차 오픈 (연도/분기 지표, 일정 캘린더 등)</li>
+          <li><strong>6월:</strong> 3차 오픈 (주제그룹피드, 앱 주요지표, OS별 지표 등)</li>
+          <li><strong>TBD:</strong> 피드 기여도 지표, 경쟁사 현황</li>
+        </ul>
       </div>
     </div>
 
-    <div class="card warning">
-      <h2 class="section-title">⚠️ 주의사항</h2>
-      <p>부여된 권한 레벨에 따라 리포트 조회 범위가 달라집니다. 권한 레벨은 네앱 NIMO 위키를 참고하여 주시기 바랍니다.</p>
-      <p>네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 네이버 내부 분석용이며 허가되지 않은 외부 공유는 금지됩니다.</p>
-      <p>대시보드 추가 개발 요청, 데이터 문의 등이 있으신 경우 네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 연락 바랍니다.</p>
+    <!-- 두 번째 2열 -->
+    <div class="grid-2">
+      <div class="card">
+        <h2>데이터 이슈 및 문의</h2>
+        <p>NIMO 리포트화가 필요하거나, 어떤 데이터가 필요 할 때</p>
+        <p>네이버앱전략지원 <strong>정하연</strong>, <strong>심은혜</strong>로 문의</p>
+      </div>
     </div>
 
+    <!-- 주의사항 -->
+    <div class="warning">
+      ⚠️ 네이버앱서비스 NIMO를 통해 확인하는 모든 데이터는 <strong>내부 분석용</strong>이며, <strong>외부 공유는 금지</strong>됩니다.  
+      권한 레벨에 따라 리포트 조회 범위가 다를 수 있으며, 세부 권한은 네앱 NIMO 위키를 참고하세요.
+    </div>
   </div>
 </body>
 </html>
